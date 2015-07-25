@@ -16,13 +16,13 @@
                         <label width="136" alignment="left" text="100" textAlignment="center" id="NWg-LM-yxk"/>
                         <group width="136" alignment="left" id="zGf-IL-Zod">
                             <items>
-                                <button width="67" alignment="left" title="-" id="LUM-8e-nDQ">
+                                <button width="67" height="27.5" alignment="left" title="-" id="LUM-8e-nDQ">
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <action selector="minusButton" destination="AgC-eL-Hgc" id="gbM-yK-nsR"/>
                                     </connections>
                                 </button>
-                                <button width="68" alignment="left" title="+" id="ryS-DH-BAB">
+                                <button width="68" height="26.5" alignment="left" title="+" id="ryS-DH-BAB">
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <action selector="plusButton" destination="AgC-eL-Hgc" id="K7h-fy-8Iv"/>
@@ -30,19 +30,33 @@
                                 </button>
                             </items>
                         </group>
-                        <button width="136" alignment="left" title="Add" id="YN7-3R-AUi">
+                        <slider width="1" height="17.5" alignment="left" continuous="YES" value="1" maximum="100" steps="100" id="tf9-kX-L2F">
+                            <connections>
+                                <action selector="sliderUsed:" destination="AgC-eL-Hgc" id="hJj-h5-p7j"/>
+                            </connections>
+                        </slider>
+                        <button width="136" height="21.5" alignment="left" title="Add" id="YN7-3R-AUi">
                             <color key="backgroundColor" red="0.37428977272727271" green="0.083080438905074994" blue="0.27787955525568175" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addButtonTapped" destination="AgC-eL-Hgc" id="jFO-jm-RU7"/>
                             </connections>
                         </button>
+                        <button width="1" height="25.5" alignment="left" title="Hide Slider" id="3hQ-kJ-ChG">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="hideSlider" destination="AgC-eL-Hgc" id="4e6-qh-kXd"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="caloriesLabel" destination="NWg-LM-yxk" id="JPx-zf-2Jq"/>
+                        <outlet property="hideSliderButton" destination="3hQ-kJ-ChG" id="pc0-Kv-K17"/>
+                        <outlet property="slider" destination="tf9-kX-L2F" id="BrO-eZ-Zuw"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="335"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
